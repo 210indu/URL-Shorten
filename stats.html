@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>URL Statistics</h1>
+    <div class="stats">
+        <p><strong>Original URL:</strong> <a href="{{ stats['original_url'] }}" target="_blank">{{ stats['original_url'] }}</a></p>
+        <p><strong>Short URL:</strong> {{ request.host_url }}{{ stats['short_code'] }}</p>
+        <p><strong>Created at:</strong> {{ stats['created_at'] }}</p>
+        <p><strong>Total clicks:</strong> {{ stats['clicks'] }}</p>
+    </div>
+    <p><a href="{{ url_for('index') }}">Shorten another URL</a></p>
+{% endblock %}
