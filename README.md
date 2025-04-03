@@ -1,4 +1,6 @@
 # URL-Shorten
+STEPS TO RUN
+
  python -m venv venv
  
  venv\Scripts\activate
